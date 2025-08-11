@@ -1,0 +1,47 @@
+{
+    "Parser": {
+        "tracing_mode": false,
+        "report_interval": 5,
+        "pkt_meta_ring_queue_size": 1e7,
+        "burst_pkt_num": 128
+    },
+    "Assembler": {
+        "tracing_mode": false,
+        "report_interval": 5,
+        "pause_time": 1e6,
+        "pkt_meta_buffer_size": 1e7,
+        "max_fetch": 1e6,
+	"trunc_flow_len": 150
+    },
+    "Inspector": {
+        "idle_time_out": 16e6,
+        "hard_time_out": 50e6,
+        "trunc_flow_len": 150,
+        "long_th": 40
+    },
+    "Aggregator": {
+        "tracing_mode": false,
+        "report_interval": 5,
+        "trunc_flow_len": 150,
+        "shortest_prefix_len": 24,
+        "aggr_len_th": 150,
+        "aggr_cycle": 10000
+    },
+    "Detector": {
+        "tracing_mode": false,
+        "report_interval": 5,
+        "slice_len": 40,
+        "trunc_flow_len": 150,
+        "model": "l8_v3"
+    },
+    "DPDK" : {
+        "rx_queue_num": 4,
+        "tx_queue_num": 4,
+        "detector_cores_num": 8,
+        "assembler_cores_num": 4,
+	"inspector_cores_num": 4,
+	"aggregator_cores_num": 6,
+        "parser_cores_num": 4,
+        "dpdk_port_vec": [0]
+    }
+}
