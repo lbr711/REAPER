@@ -1,5 +1,5 @@
 # REAPER
-Please make sure that both dpdk and pcapplusplus are installed 
+Please make sure that both dpdk and pcapplusplus are installed, refer to: https://github.com/lbr711/CXX-Wrapper-for-DPDK
 
 mkdir build & cd build
 
